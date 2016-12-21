@@ -65,7 +65,7 @@ div:nth-child(9) {
 
 div:nth-child(10) {
     background: url("images/1_02.png");
-    transform: translate(0, -480px) rotate(90deg);
+    transform: translateY(-480px) rotate(90deg);
 }
 
 div:nth-child(11) {
@@ -75,12 +75,12 @@ div:nth-child(11) {
 
 div:nth-child(12) {
     background: url("images/1_16.png");
-    transform: translate(0, 240px) rotate(90deg);
+    transform: translateY(240px) rotate(90deg);
 }
 
 div:nth-child(13) {
     background: url("images/1_15.png");
-    transform: translate(480px);
+    transform: translateX(480px);
 }
 
 div:nth-child(14) {
