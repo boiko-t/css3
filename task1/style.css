@@ -20,30 +20,37 @@ div {
 
 div:nth-child(1) {
     background: url("images/1_06.png");
+    transform: translate(240px, 240px) rotate(90deg);
 }
 
 div:nth-child(2) {
     background: url("images/1_10.png");
+    transform: translate(0, 480px) rotate(180deg);
 }
 
 div:nth-child(3) {
     background: url("images/1_03.png");
+    transform: rotate(-90deg);
 }
 
 div:nth-child(4) {
     background: url("images/1_05.png");
+    transform: translate(-720px, 240px) rotate(180deg);
 }
 
 div:nth-child(5) {
     background: url("images/1_13.png");
+    transform: translate(0, 480px) rotate(-90deg);
 }
 
 div:nth-child(6) {
     background: url("images/1_01.png");
+    transform: translate(-240px, -240px);
 }
 
 div:nth-child(7) {
     background: url("images/1_09.png");
+    transform: translate(-480px, 240px);
 }
 
 div:nth-child(8) {
@@ -53,32 +60,40 @@ div:nth-child(8) {
 
 div:nth-child(9) {
     background: url("images/1_04.png");
+    transform: translate(720px, -480px) rotate(180deg);
 }
 
 div:nth-child(10) {
     background: url("images/1_02.png");
+    transform: translate(0, -480px) rotate(90deg);
 }
 
 div:nth-child(11) {
     background: url("images/1_11.png");
+    transform: rotate(90deg);
 }
 
 div:nth-child(12) {
     background: url("images/1_16.png");
+    transform: translate(0, 240px) rotate(90deg);
 }
 
 div:nth-child(13) {
     background: url("images/1_15.png");
+    transform: translate(480px);
 }
 
 div:nth-child(14) {
     background: url("images/1_14.png");
+    transform: rotate(180deg);
 }
 
 div:nth-child(15) {
     background: url("images/1_12.png");
+    transform: translate(240px, -240px) rotate(-90deg);
 }
 
 div:nth-child(16) {
     background: url("images/1_07.png");
+    transform: translate(-240px, -480px) rotate(180deg);
 }
