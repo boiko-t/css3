@@ -1,17 +1,4 @@
-@keyframes radio-on-animation {
-    0% { background: radial-gradient(ellipse at center, #e1235f 15%, #fff 15%); }
-    35% { background: radial-gradient(ellipse at center, #e1235f 25%, #fff 25%); }
-    70% { background: radial-gradient(ellipse at center, #e1235f 33%, #fff 33%); }
-    100% { background: radial-gradient(ellipse at center, #e1235f 45%, #fff 45%);}
-}
-
-@keyframes radio-off-animation {
-    0% { background: radial-gradient(ellipse at center, #e1235f 45%, #fff 45%); }
-    35% { background: radial-gradient(ellipse at center, #e1235f 33%, #fff 33%); }
-    70% { background: radial-gradient(ellipse at center, #e1235f 25%, #fff 25%); }
-    100% { background: radial-gradient(ellipse at center, #e1235f 15%, #fff 15%);}
-}
-
+/*General styles*/
 input[type="radio"],
 input[type="checkbox"] {
     display: none;
@@ -24,6 +11,7 @@ label {
     color: #616161;
 }
 
+/*radio button's style*/
 input[type="radio"] + label::before {
     display: inline-block;
     border: 2px #c5c5c5 solid;
@@ -39,13 +27,39 @@ input[type="radio"] + label:hover::before {
     border-color: #616161;
 }
 
-input[type="radio"]:checked + label::before{
+input[type="radio"]:checked + label::before {
     border-color: #e1235f;
-    animation: radio-on-animation 0.05s linear;
-    background: radial-gradient(ellipse at center, #e1235f 40%, #fff 45%);
+    background: #e1235f;
+    box-shadow: 0 0 0 3px  #fff inset;
+    transition: box-shadow 0.8s;
 }
 
-input[type="radio"]:not(:checked) + label::before{
-    animation: radio-off-animation 0.05s linear;
+input[type="radio"]:not(:checked) + label::before {
+    background: #e1235f;
+    box-shadow: 0 0 0 11px  #fff inset;
+    transition: box-shadow 0.8s;
 }
 
+/*checkbox's style*/
+input[type="checkbox"] + label::before {
+    display: inline-block;
+    border-radius: 10%;
+    transform: translateY(25%);
+    background: #d5d5d5;
+    margin-right: 7px;
+    width: 19px;
+    height: 19px;
+    content: "";
+}
+
+input[type="checkbox"] + label:hover::before {
+    background: #afafaf;
+}
+
+input[type="checkbox"]:checked + label::before {
+    width: 14px;
+    height: 17px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
