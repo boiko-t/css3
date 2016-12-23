@@ -1,50 +1,99 @@
-.hamburger {
-    display: block;
-    width: 50px;
-    height: 40px;
-    position: relative;
-    cursor: pointer;
-}
-
-.hamburger input {
+/*menu button*/
+#hamburger-control {
     display: none;
 }
 
-.hamburger-top-strip,
-.hamburger-central-strip,
-.hamburger-bottom-strip {
+.hamburger {
+    margin: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    position: relative;
+    order: 2;
+}
+
+.hamburger::before,
+.hamburger::after,
+.hamburger span {
     display: block;
-    background-color: #8d48ab;
-    width: 100%;
+    content: "";
+    background-color: #ffffff;
+    width: 50px;
     height: 3px;
     position: absolute;
     transform: translateY(0) rotate(0deg);
-    transition: transform 1s, background 0.8s;
+    transition: transform 1s, background-color 1s;
 }
 
-.hamburger-central-strip {
-    top: 18px;
+.hamburger span {
+    top: 45%;
 }
 
-.hamburger-top-strip {
+.hamburger::before {
     top: 0;
 }
 
-.hamburger-bottom-strip {
+.hamburger::after {
     bottom: 0;
 }
 
-.hamburger input[type="checkbox"]:checked ~ .hamburger-central-strip {
+#hamburger-control:checked ~ .hamburger span {
     background: none;
     transition: background 0.5s;
 }
 
-.hamburger input[type="checkbox"]:checked ~ .hamburger-top-strip {
+#hamburger-control:checked ~ .hamburger::before {
     transform: translateY(18px) rotate(45deg);
     transition: transform 1s;
 }
 
-.hamburger input[type="checkbox"]:checked ~ .hamburger-bottom-strip {
+#hamburger-control:checked ~ .hamburger::after {
     transform: translateY(-19px) rotate(-45deg);
     transition: transform 1s;
+}
+
+/*menu itself*/
+.menu-wrapper {
+    background-color: #FF4081;
+    width: 40%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.menu-wrapper img {
+    height: 80px;
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    margin-left: auto;
+    margin-top: 40px;
+    padding-right: 40px;
+    color: #F8BBD0;
+    font: 14pt Arial;
+    opacity: 0;
+    height: 0;
+    order: 1;
+    transition: 0.8s;
+}
+
+.menu li {
+    margin: 5px;
+}
+
+.menu li:hover {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#hamburger-control:checked ~ .menu {
+    opacity: 1;
+    height: 140px;
+    transition: height 1s, opacity 1.5s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
