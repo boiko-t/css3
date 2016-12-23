@@ -1,0 +1,50 @@
+.hamburger {
+    display: block;
+    width: 50px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger-top-strip,
+.hamburger-central-strip,
+.hamburger-bottom-strip {
+    display: block;
+    background-color: #8d48ab;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    transform: translateY(0) rotate(0deg);
+    transition: transform 1s, background 0.8s;
+}
+
+.hamburger-central-strip {
+    top: 18px;
+}
+
+.hamburger-top-strip {
+    top: 0;
+}
+
+.hamburger-bottom-strip {
+    bottom: 0;
+}
+
+.hamburger input[type="checkbox"]:checked ~ .hamburger-central-strip {
+    background: none;
+    transition: background 0.5s;
+}
+
+.hamburger input[type="checkbox"]:checked ~ .hamburger-top-strip {
+    transform: translateY(18px) rotate(45deg);
+    transition: transform 1s;
+}
+
+.hamburger input[type="checkbox"]:checked ~ .hamburger-bottom-strip {
+    transform: translateY(-19px) rotate(-45deg);
+    transition: transform 1s;
+}
